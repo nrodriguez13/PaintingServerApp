@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'set'
+
+Painting.create(name: 'More Than Life', artist_name: 'Unknown', style:"photography", complete: true, xcoord: 30, ycoord: 50, 
+				url: "http://www.stereofox.com/images/9426/resized/9432.jpg")
