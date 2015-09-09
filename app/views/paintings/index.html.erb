@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<table style="width:100%">
+  <tr>
+    <th>Painting Name</th>
+    <th>Arist Name</th>		
+    <th>X Coordinates</th>
+    <th>Y Coordinates</th>
+    <th>Style</th>
+    <th>Complete/Partial</th>
+    <th>URL</th>
+  </tr>
+  
+  <% @paintings.each do |painting| %>
+  <tr>
+  	<td> <%= painting.name %> </td>
+  	<td> <%= painting.artist_name %> </td>
+  	<td> <%= painting.xcoord %> </td>
+  	<td> <%= painting.ycoord %> </td>
+  	<td> <%= painting.style %> </td>
+  	<td> <%= painting.complete %> </td>
+  	<td> <%= painting.url %> </td>
+  </tr>
+  
+  <% end %>
+</table>
+
+</body>
+</html>
