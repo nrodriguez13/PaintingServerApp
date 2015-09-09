@@ -10,3 +10,8 @@ require 'set'
 
 Painting.create(name: 'More Than Life', artist_name: 'Unknown', style:"photography", complete: true, xcoord: 30, ycoord: 50, 
 				url: "http://www.stereofox.com/images/9426/resized/9432.jpg")
+
+Painting.create(name: 'Foundation', artist_name: 'Unknown', style:"photography", complete: false, xcoord: 30, ycoord: 50, 
+				url: "http://www.metalsucks.net/wp-content/uploads/2011/06/93.jpg")
+
+

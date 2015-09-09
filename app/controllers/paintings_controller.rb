@@ -4,6 +4,6 @@ class PaintingsController < ApplicationController
 	end
 
 	def show 
-		@painting = Painting.find(params[:name])
+		@painting = Painting.find(params[:id])
 	end
 end
