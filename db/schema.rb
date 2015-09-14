@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150903215952) do
+ActiveRecord::Schema.define(version: 20150910172759) do
 
   create_table "paintings", force: true do |t|
     t.string   "name"
     t.string   "artist_name"
     t.string   "style"
     t.boolean  "complete"
-    t.integer  "xcoord"
-    t.integer  "ycoord"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "xcoords"
+    t.string   "ycoords"
   end
 
 end

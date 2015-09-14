@@ -28,8 +28,8 @@ th, td {
   <tr>
   	<td> <%= painting.name %> </td>
   	<td> <%= painting.artist_name %> </td>
-  	<td> <%= painting.xcoord %> </td>
-  	<td> <%= painting.ycoord %> </td>
+  	<td> <%= painting.xcoords %> </td>
+  	<td> <%= painting.ycoords %> </td>
   	<td> <%= painting.style %> </td>
   	<td> <%= painting.complete %> </td>
   	<td> <%= painting.url %> </td>
@@ -40,3 +40,16 @@ th, td {
 
 </body>
 </html>
+
+
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<feedback>
+  <% @paintings.each do |painting| %>
+    <painting> <%= painting.name %> </painting>
+    <aritst> <%= painting.artist_name %> </artist> 
+    <urls>http://facesdb-visionlab.rhcloud.com/face_images/89410.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89371.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89300.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89461.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89361.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89297.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89232.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89445.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89232.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89297.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89361.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89371.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89300.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89445.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89410.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89461.jpg</urls>
+    <is_rateds>0; 1; 1; 1; 1; 1; 0; 1; 1; 1; 0; 1; 0; 1; 1; 1</is_rateds>
+</feedback> 
+<% end %>
