@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root "paintings#index"
+  root "static_pages#home"
+  get "paintings/id", to: "paintings#index"
+  get "images/1", to: "static_pages#home"
+  #get "images/2", to: "app#assets"
   #get "/paintings/:id", to: "paintings#index", as: "painting"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

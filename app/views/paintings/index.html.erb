@@ -42,6 +42,7 @@ th, td {
 </html> -->
 
 <?xml version="1.0" encoding="ISO-8859-1"?>
+<feedback>
 <% $ptitles = " " %>
 <% $partists = " " %>
 <% $xcoords = " " %>
@@ -49,7 +50,6 @@ th, td {
 <% $pstyle = " " %>
 <% $pcomplete = " " %>
 <% $purl = " " %>
-<% $semicolon = ";"%>
 <% @paintings.each do |painting| %>
   <% $ptitles = $ptitles + painting.name + "; " %>
   <% $partists = $partists + painting.artist_name + "; " %>
@@ -66,3 +66,4 @@ th, td {
 <%= "<" + "style" + ">" + $pstyle.chop.chop + " <" + "/" + "style" + ">" %>
 <%= "<" + "complete" + ">" + $pcomplete.chop.chop + " <" + "/" + "complete" + ">" %>
 <%= "<" + "url" + ">" + $purl.chop.chop + " <" + "/" + "url" + ">" %>
+</feedback>
