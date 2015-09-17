@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -16,14 +16,14 @@ th, td {
 <table style="width:100%">
   <tr>
     <th>Painting Name</th>
-    <th>Arist Name</th>		
+    <th>Arist Name</th>
     <th>X Coordinates</th>
     <th>Y Coordinates</th>
     <th>Style</th>
     <th>Complete/Partial</th>
     <th>URL</th>
   </tr>
-  
+
   <% @paintings.each do |painting| %>
   <tr>
   	<td> <%= painting.name %> </td>
@@ -34,22 +34,35 @@ th, td {
   	<td> <%= painting.complete %> </td>
   	<td> <%= painting.url %> </td>
   </tr>
-  
+
   <% end %>
 </table>
 
 </body>
-</html>
-
-
-
+</html> -->
 
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<feedback>
-  <% @paintings.each do |painting| %>
-    <painting> <%= painting.name %> </painting>
-    <aritst> <%= painting.artist_name %> </artist> 
-    <urls>http://facesdb-visionlab.rhcloud.com/face_images/89410.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89371.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89300.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89461.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89361.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89297.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89232.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89445.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89232.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89297.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89361.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89371.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89300.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89445.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89410.jpg; http://facesdb-visionlab.rhcloud.com/face_images/89461.jpg</urls>
-    <is_rateds>0; 1; 1; 1; 1; 1; 0; 1; 1; 1; 0; 1; 0; 1; 1; 1</is_rateds>
-</feedback> 
+<% $ptitles = " " %>
+<% $partists = " " %>
+<% $xcoords = " " %>
+<% $ycoords = " " %>
+<% $pstyle = " " %>
+<% $pcomplete = " " %>
+<% $purl = " " %>
+<% $semicolon = ";"%>
+<% @paintings.each do |painting| %>
+  <% $ptitles = $ptitles + painting.name + "; " %>
+  <% $partists = $partists + painting.artist_name + "; " %>
+  <% $xcoords = $xcoords + painting.xcoords + "; " %>
+  <% $ycoords = $ycoords + painting.ycoords + "; " %>
+  <% $pstyle = $pstyle + painting.style + "; " %>
+  <% $pcomplete = $pcomplete + painting.complete.to_s + "; " %>
+  <% $purl = $purl + painting.url + "; " %>
 <% end %>
+<%= "<" + "painting" + ">" + $ptitles.chop.chop + " <" + "/" + "painting" + ">" %>
+<%= "<" + "artist" + ">" + $partists.chop.chop + " <" + "/" + "artist" + ">" %>
+<%= "<" + "xcoords" + ">" + $xcoords.chop.chop + " <" + "/" + "xcoords" + ">" %>
+<%= "<" + "ycoords" + ">" + $ycoords.chop.chop + " <" + "/" + "ycoords" + ">" %>
+<%= "<" + "style" + ">" + $pstyle.chop.chop + " <" + "/" + "style" + ">" %>
+<%= "<" + "complete" + ">" + $pcomplete.chop.chop + " <" + "/" + "complete" + ">" %>
+<%= "<" + "url" + ">" + $purl.chop.chop + " <" + "/" + "url" + ">" %>
